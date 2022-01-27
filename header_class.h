@@ -63,34 +63,32 @@ namespace HeaderCode{
         cin>>pictureFileName;
         htmlCode+="   <tr>\n    <td class=\"headertd\" colspan=\""+intToString(pageName.size())+"\">\n"   
         "     <img class=\"headerimg\" src=\""+pictureFileName+"\"/>\n";
-        htmlCode+="     </td>\n    </tr>\n";
+        htmlCode+="    </td>\n   </tr>\n";
       }
       htmlCode+="   <tr>\n";
-       htmlCode+="    <td class=\"headertd\">\n<a class=\"headera\" href=\"""index.html\">\n"+pageName[0]+"\n    </td>\n";
+      htmlCode+="    <td class=\"headertd\">\n<a class=\"headera\" href=\"""index.html\">\n"+pageName[0]+"\n    </td>\n";
       for(int i=1 ; i<pageName.size() ; i++){
         htmlCode+="    <td class=\"headertd\">\n<a class=\"headera\" href=\""+pageName[i]+".html\">\n"+pageName[i]+"\n    </td>\n";
       }
       htmlCode+="   </tr>\n  </table>";
       cssCode="table.headertable{\n";
-      cssCode+=" width: 80%;\n";
-      cssCode+=" margin-left: auto;\n margin-right: auto;\n}\n";
+      cssCode+="  width: 80%;\n";
+      cssCode+="  margin-left: auto;\n  margin-right: auto;\n}\n";
       cssCode+="td.headertd{\n";
-      cssCode+=" border: 1px solid white;\n";
-      cssCode+=" color: white;\n text-align: center;\n font-size: 20px;\n}";
+      cssCode+="  border: 1px solid white;\n";
+      cssCode+="  color: white;\n  text-align: center;\n  font-size: 20px;\n}";
       cssCode+="a.headera{\n";
-      cssCode+=" text-decoration: none;\n color: white;\n";
+      cssCode+="  text-decoration: none;\n  color: white;\n";
       cssCode+="}\n";
       if(headerChose == 1){
         cssCode+="img.headerimg{\n";
-        cssCode+=" width: 100px\n heignt: auto\n}";
+        cssCode+="  width: 100px\n  heignt: auto\n}";
       }
     }
     string getHtml(){
-
       return htmlCode;
     }
     string getCss(){
-
       return cssCode;
     }
   };
