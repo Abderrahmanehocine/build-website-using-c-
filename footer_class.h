@@ -30,7 +30,6 @@ namespace footerCode {
         cssCode+= "footer{\n";
         cssCode+= " margin-left: auto;\n margin-right: auto;\n}\n";
         cssCode+= "div.footerdiv{\n";
-        cssCode+= " position: fixed;\n"; 
         cssCode+= " left: 0;\n bottom: 0;\n";
         cssCode+= " width: 100%;\n";
         cssCode+= " text-align: center;\n";
