@@ -22,7 +22,7 @@ namespace footerCode {
                generateCode(webSiteName);
       }
       void generateCode(string webSiteName){
-        htmlCode="  <footer>\n   <div class=\"footerdiv\">";
+        htmlCode=" <br><br> <footer>\n   <div class=\"footerdiv\">";
         htmlCode+= webSiteName;
         htmlCode+= " all rights reserved\n";
         htmlCode+= "   </div>\n";
@@ -33,6 +33,7 @@ namespace footerCode {
         cssCode+= " left: 0;\n bottom: 0;\n";
         cssCode+= " width: 100%;\n";
         cssCode+= " text-align: center;\n";
+        cssCode+="position: fixed;\n";
         if(footerNumber == 2){
             string footerBackgroundColor;
             cout<<"Footer Background Color: " ;
