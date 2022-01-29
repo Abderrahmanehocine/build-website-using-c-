@@ -1,7 +1,6 @@
 #include "header_files.h"
 
-namespace pageCode{
-    class page{
+    class Page{
       private:
        string htmlCode;
        string cssCode;
@@ -27,8 +26,17 @@ namespace pageCode{
          htmlCode+= " <head>\n";
          htmlCode+= "  <title>\n";
          htmlCode+= pageName+"  \n</title>\n";
-         htmlCode+= "  <link rel=\"stylesheet\" href=\"css\\header.css\"";
-         htmlCode+= "  <link rel=\"stylesheet\" href=\"css\\footer.css\"";
+         htmlCode+= "  <link rel=\"stylesheet\" href=\"css\\header.css\">";
+         htmlCode+= "  <link rel=\"stylesheet\" href=\"css\\footer.css\">";
+          cssCode= "body{\n";
+         cssCode+= " background-color: "+backgroundColor+";\n}";
+         cssCode+= " table.pageTable{\n";
+         cssCode+= "   margin-right: auto;\n  margin-left: auto;\n";
+         cssCode+= "  width: 80%;\n}";
+         cssCode+= " td.pageTd{\n";
+         cssCode+= "  color: white;\n  text-align: center;\n}\n ";
+         cssCode+= " iframe{\n";
+         cssCode+= "  width: 100%;\n}\n";
          htmlCode+= "  <style>\n"+cssCode+"\n</style>\n";
          htmlCode+= " </head>\n";
          htmlCode+= " <body>\n";
@@ -59,7 +67,7 @@ namespace pageCode{
              scanf("\n");
              getline(cin,text);
              htmlCode+= "     <td class=\"pageTd\">\n";
-             htmlCode+= text "\n";
+             htmlCode+= text+"\n";
          }
          cout<<"\nDo you want to add row[y/n]: ";
          cin>>text;
@@ -70,18 +78,8 @@ namespace pageCode{
          htmlCode+= footerHtml+"\n";
          htmlCode+= " </body>\n";
          htmlCode+= "</html>\n";
-         cssCode= "body{\n";
-         cssCode+= " background-color: "+backgroundColor+";\n}";
-         cssCode+= " table.pageTable{\n";
-         cssCode+= "   margin-right: auto;\n  margin-left: auto;\n";
-         cssCode+= "  width: 80%;\n}";
-         cssCode+= " td.pageTd{\n";
-         cssCode+= "  color: white;\n  text-align: center;\n}\n";
-         cssCode+= " iframe {\n";
-         cssCode+= "  width: 100%;\n}\n";
        }
        string getHtml(){
            return htmlCode;
        }
     };
-}
