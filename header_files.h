@@ -1,5 +1,7 @@
 #include <iostream>
+#include <cstdio>
 #include <string>
 #include <vector>
 #include <fstream>
-using namespace std; 
+#include <sys/stat.h>
+using namespace std;
