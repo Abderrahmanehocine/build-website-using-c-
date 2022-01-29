@@ -1,14 +1,13 @@
 #include "header_files.h"
 
-namespace footerCode {
-  class footer{
+  class Footer{
     private: 
      string htmlCode;
      string cssCode;
      int footerNumber;
     public:
       void chooseFooter(string webSiteName){
-         cout<<"Footer 1:\n"
+         cout<<"\n\nFooter 1:\n"
                "--------------------------------------\n"
                "| (Website Name) all rights reserved |\n"
                "--------------------------------------\n"
@@ -46,11 +45,10 @@ namespace footerCode {
         }
         cssCode+= "}\n";
       }
-     string getHtmlCode() { 
+     string getHtml() { 
          return htmlCode; 
         }
-     string getCssCode() { 
+     string getCss() { 
          return cssCode;
      }
   };
-}
